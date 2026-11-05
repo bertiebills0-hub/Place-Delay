@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "placedelay",
+  "version": "${version}",
+  "name": "Place Delay",
+  "description": "Press the minus key to cycle the block/minecart/rail placement delay from 0 to 4 ticks.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.placedelay.PlaceDelayClient"]
+  },
+  "mixins": ["placedelay.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
