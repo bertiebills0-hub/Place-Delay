@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import org.lwjgl.glfw.GLFW;
 
 public class PlaceDelayClient implements ClientModInitializer {
     private static final int VANILLA_DELAY = 4;
@@ -20,8 +19,8 @@ public class PlaceDelayClient implements ClientModInitializer {
     public void onInitializeClient() {
         cycleKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.placedelay.cycle",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_MINUS,
+                InputConstants.Type.KEYBOARD,
+                InputConstants.KEY_MINUS,
                 KeyMapping.Category.GAMEPLAY));
 
         ClientTickEvents.END_CLIENT_TICK.register(mc -> {
