@@ -27,7 +27,7 @@ public class PlaceDelayClient implements ClientModInitializer {
             while (cycleKey.consumeClick()) {
                 delay = (delay + 1) % (VANILLA_DELAY + 1); // 0,1,2,3,4,0,...
                 if (mc.player != null) {
-                    mc.gui.setOverlayMessage(
+                    mc.gui.hud.setOverlayMessage(
                             Component.literal("Place delay: " + delay
                                     + (delay == VANILLA_DELAY ? " (vanilla)" : "")),
                             false);
